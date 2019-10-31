@@ -8,8 +8,6 @@ RSpec.describe Image, type: :model do
         [0, 0, 0, 0],
         [0, 0, 0, 0],
         [0, 1, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]
       ]
 
       expected = [
@@ -17,11 +15,9 @@ RSpec.describe Image, type: :model do
         [0, 0, 0, 0],
         [0, 1, 0, 0],
         [1, 1, 1, 0],
-        [0, 1, 0, 0],
-        [0, 0, 0, 0]
       ]
      image = Image.new(input)
-     expect(image.test.imageArray).to eq expected
+     expect(image.test).to eq expected
     end
   end
 end
